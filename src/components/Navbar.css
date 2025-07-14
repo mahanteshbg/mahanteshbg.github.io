@@ -1,0 +1,105 @@
+/* Navbar container */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #222; /* Dark grey */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  z-index: 100;
+}
+
+/* Center navbar content and logo inside a container */
+.navbar-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+}
+
+/* Adjust logo size and alignment */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 60px; /* Increased logo size */
+  width: auto;
+}
+
+/* Navbar menu list */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 3rem; /* Increased spacing between menu items */
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Navbar links */
+.navbar li a {
+  text-decoration: none;
+  color: #fff; /* Make links white for contrast */
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar li a:hover {
+  color: #007bff;
+}
+
+.navbar-menu li a {
+  cursor: pointer;
+}
+
+/* Hamburger toggle button (hidden by default) */
+.navbar-toggle {
+  display: none;
+  font-size: 2.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  color: #fff; /* Make icon white */
+  z-index: 101;
+  transition: color 0.2s;
+}
+
+.navbar-toggle:focus {
+  outline: none;
+  color: #007bff;
+}
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+  .navbar-inner {
+    max-width: 98vw;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #222; /* Changed menu background to dark grey */
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    gap: 1rem; /* Reduced gap between menu items */
+    padding-bottom: 2rem;
+  }
+  .navbar-menu.active {
+    display: flex;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+}

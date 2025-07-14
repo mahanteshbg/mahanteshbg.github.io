@@ -3,27 +3,42 @@ html {
 }
 
 body {
-  font-family: sans-serif;
   margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f6f8fa;
 }
 
-.navbar {
-  position: sticky;
-  top: 0;
-  background: #333;
-  color: white;
-  padding: 1rem;
-  z-index: 1000;
+/* Main content area */
+.main-content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
+/* Section spacing */
+section {
+  margin-bottom: 2rem;
 }
 
 .section {
   padding: 80px 20px;
   min-height: 100vh;
+}
+
+/* Responsive main content */
+@media (max-width: 1000px) {
+  .main-content {
+    max-width: 98vw;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+  padding: 20px 20px;
+}
 }
