@@ -12,12 +12,14 @@ function App() {
   return (
     <>
       <Navbar />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Education />
-      <Contact />
+      <div className="main-content">
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Education />
+        <Contact />
+      </div>
     </>
   );
 }
